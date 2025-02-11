@@ -1,0 +1,111 @@
+Planificar la producción de una máquina corrugadora de cartón en corridas, cada una procesando 1-2 tipos de cajas. Priorizar pedidos por fecha de entrega y cantidad, con máximo 2 días de anticipación (extensible si necesario).
+
+Si una lámina tiene una caja asociada (caja.id), no se combina. Pero sí es necesario que siga las demás reglas aplicables.
+Si una lámina no tiene caja asociada, puede usarse para combinaciones siguiendo las reglas.
+
+Reglas:
+Agrupar pedidos por ECT, liner y tratamiento antihumedad.
+Refile: 2 cm a 4 cm por lado (hasta 1 decimal).
+Cajas en la lámina:
+Una caja puede estar dos veces. Si cabe dos veces no es necesario combinar con otra solo si sobra 8 cm o más de espacio, puede combinarse con otra.
+Máx. 2 combinaciones por lámina.
+Si una caja no puede combinarse ni repetirse, se programa sola con mayor refile.
+Si el refile excede 4 cm por lado y no hay combinación posible, se marca como tira_autorizada.
+Jerarquía de pedidos:
+Pedido prioritario no cambia.
+Pedido complementario se ajusta en cantidad.
+La parte restante del complemento debe asignarse a otra combinación.
+Cálculos:
+Metros lineales: (cantidad * largo_caja / 100) / salen
+Tiempo: metros_lineales / 65 (redondeado a entero).
+Complemento_piezas: ((cantidad_prioridad * largo_prioridad / salen_prioridad)) / (largo_complemento * salen_complemento) (redondeado a entero).
+Horario:
+Lunes: 8:20-18:00.
+Mar-Jue: 8:20-22:30.
+Viernes: 8:20-17:30.
+Llenar todo el horario antes de dejar espacios.
+Las corridas se encadenan sin tiempos fijos de 45 min, cada una ocupa lo necesario.
+Si una corrida excede el horario del día, se ajusta al siguiente día.
+
+Entrada:
+Se proporcionan dos JSON:
+Pedidos: Contiene la información de los pedidos a producir.
+Láminas: Contiene las láminas disponibles y su compatibilidad con los pedidos.
+Cajas: Contiene las cajas y su información de los pedidos a producir.
+
+Salida esperada:
+Nada de texto, solo un JSON con las corridas programadas, ejemplo de formato:
+
+[{
+        "pedido": "001",
+        "cajas_procesadas": [
+            { "simbolo": "caja_001", "cantidad": 500, "salen": 2, "jerarquia": "prioridad" }],
+        "lamina": "lamina_001",
+        "fecha_programada": "2025-02-01",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+	"tiempo": "120" //minutos
+        "refile": 5,
+        "metros_lineales": 6171,
+        "peso_total": 3189,
+        "velocidad": 70,
+        "maquina": "flexo",
+        "status": "pendiente"
+    },
+
+    {
+        "pedido": "001",
+        "cajas_procesadas": [
+            { "simbolo": "caja_001", "cantidad": 500, "salen": 2, "jerarquia": "prioridad" },
+            { "simbolo": "caja_002", "cantidad": 490, "salen": 1, "jerarquia": "complemento", "restante": 110 }
+        ],
+        "lamina": "lamina_001",
+        "fecha_programada": "2025-02-01",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+	"tiempo": "120" //minutos
+        "refile": 5,
+        "metros_lineales": 6171,
+        "peso_total": 3189,
+        "velocidad": 70,
+        "maquina": "flexo",
+        "status": "pendiente"
+    },
+    {
+        "pedido": "002",
+        "cajas_procesadas": [
+            { "simbolo": "caja_003", "cantidad": 300, "salen": 1, "jerarquia": "prioridad" },
+            { "tira_autorizada": true, "mts_lineales": 550 }
+        ],
+        "lamina": "lamina_002",
+        "fecha_programada": "2025-02-01",
+        "hora_inicio": "10:05",
+        "hora_fin": "11:20",
+        "refile": 5,
+        "metros_lineales": 4120,
+        "peso_total": 2100,
+        "velocidad": 65,
+        "maquina": "flexo",
+        "status": "pendiente"
+    },
+{
+        "pedido": "002",
+        "cajas_procesadas": [
+            { "simbolo": "caja_003", "cantidad": 300, "salen": 1, "jerarquia": "prioridad" },
+	    { "simbolo": "caja_002", "cantidad": 490, "salen": 1, "jerarquia": "complemento", "restante": 110 },
+            { "tira_autorizada": true, "mts_lineales": 550 }
+        ],
+        "lamina": "lamina_002",
+        "fecha_programada": "2025-02-01",
+        "hora_inicio": "10:05",
+        "hora_fin": "11:20",
+        "refile": 5,
+        "metros_lineales": 4120,
+        "peso_total": 2100,
+        "velocidad": 65,
+        "maquina": "flexo",
+        "status": "pendiente"
+    }
+
+]
+

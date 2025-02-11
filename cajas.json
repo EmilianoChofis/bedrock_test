@@ -1,0 +1,80 @@
+[
+  {
+    "simbolo": "GALLETERA CR 15R-M",
+    "ect": 19,
+    "liner": "kraft",
+    "ancho": 42,
+    "largo": 112.3,
+    "flauta": "C",
+    "tratamiento": 0,
+    "extra": {
+      "tipo": "CRR",
+      "maquina": "flexo"
+    }
+  },
+  {
+    "simbolo": "GALLETERA CR 30-R",
+    "ect": 19,
+    "liner": "kraft",
+    "ancho": 44.2,
+    "largo": 165.3,
+    "flauta": "C",
+    "tratamiento": 0,
+    "extra": {
+      "tipo": "CRR",
+      "maquina": "flexo"
+    }
+  },
+  {
+    "simbolo": "EASTER EGG CANE WITH CHOCOLATE 1.7 OZ",
+    "ect": 29,
+    "liner": "kraft",
+    "ancho": 65.6,
+    "largo": 89.8,
+    "flauta": "C",
+    "tratamiento": 0,
+    "extra": {
+      "tipo": "CRR",
+      "maquina": "almacen"
+    }
+  },
+  {
+    "simbolo": "BONDY CR RING POP 20",
+    "ect": 32,
+    "liner": "kraft",
+    "ancho": 56.7,
+    "largo": 164.3,
+    "flauta": "C",
+    "tratamiento": 0,
+    "extra": {
+      "tipo": "CRR",
+      "maquina": "flexo"
+    }
+  },
+  {
+    "simbolo": "JARAM CR 34X34X26",
+    "ect": 32,
+    "liner": "kraft",
+    "ancho": 61.1,
+    "largo": 142.3,
+    "flauta": "C",
+    "tratamiento": 0,
+    "extra": {
+      "tipo": "CRR",
+      "maquina": "flexo"
+    }
+  },
+  {
+    "simbolo": "DEG CR CE-5 (PDA)",
+    "ect": 19,
+    "liner": "kraft",
+    "ancho": 54.8,
+    "largo": 144.3,
+    "flauta": "C",
+    "tratamiento": 0,
+    "extra": {
+      "tipo": "CRR",
+      "maquina": "flexo"
+    }
+  }
+]

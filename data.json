@@ -1,0 +1,234 @@
+{
+  "cajas": [
+    {
+      "simbolo": "ecg-01",
+      "ect": 23,
+      "liner": "kraft",
+      "ancho": 100,
+      "largo": 60,
+      "flauta": "b",
+      "tratamiento": 1,
+      "cliente": "empresa_a",
+      "rayados": [{ "r1": 10 }, { "r2": 20 }, { "r3": 15 }],
+      "status": "aprobado"
+    },
+    {
+      "simbolo": "ecg-02",
+      "ect": 19,
+      "liner": "blanco",
+      "ancho": 95,
+      "largo": 55,
+      "flauta": "c",
+      "tratamiento": 0,
+      "cliente": "empresa_b",
+      "rayados": [{ "r1": 8.5 }, { "r2": 18.2 }, { "r3": 16 }],
+      "status": "aprobado"
+    },
+    {
+      "simbolo": "ecg-03",
+      "ect": 21,
+      "liner": "kraft",
+      "ancho": 110,
+      "largo": 70,
+      "flauta": "e",
+      "tratamiento": 1,
+      "cliente": "empresa_c",
+      "rayados": [{ "r1": 12 }, { "r2": 22 }, { "r3": 18 }],
+      "status": "revision"
+    }
+  ],
+  "laminas": [
+    {
+      "id": "lamina_001",
+      "ancho_rollo": 140,
+      "p1": 120,
+      "p2": 130,
+      "p3": 125,
+      "ect": 23,
+      "caja": { "id": "ecg-01" }
+    },
+    {
+      "id": "lamina_002",
+      "ancho_rollo": 135,
+      "p1": 115,
+      "p2": 120,
+      "p3": 110,
+      "ect": 19,
+      "caja": null
+    },
+    {
+      "id": "lamina_003",
+      "ancho_rollo": 150,
+      "p1": 130,
+      "p2": 135,
+      "p3": 140,
+      "ect": 21,
+      "caja": { "id": "ecg-03" }
+    }
+  ],
+  "pedidos": [
+    {
+      "id": "pedido_001",
+      "cajas": [
+        { "simbolo": "ecg-01", "cantidad": 5000 },
+        { "simbolo": "ecg-02", "cantidad": 3000 }
+      ],
+      "fecha_entrega_estimada": "2025-02-15",
+      "status": "activo"
+    },
+    {
+      "id": "pedido_002",
+      "cajas": [
+        { "simbolo": "ecg-03", "cantidad": 2000 }
+      ],
+      "fecha_entrega_estimada": "2025-02-18",
+      "status": "pendiente"
+    },
+    {
+      "id": "pedido_003",
+      "cajas": [
+        { "simbolo": "ecg-02", "cantidad": 8000 }
+      ],
+      "fecha_entrega_estimada": "2025-02-12",
+      "status": "activo"
+    },
+    {
+      "id": "pedido_004",
+      "cajas": [
+        { "simbolo": "ecg-01", "cantidad": 4000 }
+      ],
+      "fecha_entrega_estimada": "2025-02-10",
+      "status": "pendiente"
+    },
+    {
+      "id": "pedido_005",
+      "cajas": [
+        { "simbolo": "ecg-03", "cantidad": 3000 },
+        { "simbolo": "ecg-01", "cantidad": 1000 }
+      ],
+      "fecha_entrega_estimada": "2025-02-20",
+      "status": "activo"
+    },
+    {
+      "id": "pedido_006",
+      "cajas": [
+        { "simbolo": "ecg-02", "cantidad": 5000 }
+      ],
+      "fecha_entrega_estimada": "2025-02-22",
+      "status": "pendiente"
+    },
+    {
+      "id": "pedido_007",
+      "cajas": [
+        { "simbolo": "ecg-03", "cantidad": 7000 }
+      ],
+      "fecha_entrega_estimada": "2025-02-25",
+      "status": "activo"
+    },
+    {
+      "id": "pedido_008",
+      "cajas": [
+        { "simbolo": "ecg-01", "cantidad": 2000 }
+      ],
+      "fecha_entrega_estimada": "2025-02-28",
+      "status": "pendiente"
+    },
+    {
+      "id": "pedido_009",
+      "cajas": [
+        { "simbolo": "ecg-02", "cantidad": 6000 }
+      ],
+      "fecha_entrega_estimada": "2025-03-01",
+      "status": "activo"
+    },
+    {
+      "id": "pedido_010",
+      "cajas": [
+        { "simbolo": "ecg-01", "cantidad": 9000 }
+      ],
+      "fecha_entrega_estimada": "2025-03-05",
+      "status": "pendiente"
+    },
+    {
+      "id": "pedido_011",
+      "cajas": [
+        { "simbolo": "ecg-02", "cantidad": 3000 },
+        { "simbolo": "ecg-03", "cantidad": 1500 }
+      ],
+      "fecha_entrega_estimada": "2025-03-08",
+      "status": "activo"
+    },
+    {
+      "id": "pedido_012",
+      "cajas": [
+        { "simbolo": "ecg-01", "cantidad": 10000 }
+      ],
+      "fecha_entrega_estimada": "2025-03-12",
+      "status": "pendiente"
+    },
+    {
+      "id": "pedido_013",
+      "cajas": [
+        { "simbolo": "ecg-03", "cantidad": 8000 }
+      ],
+      "fecha_entrega_estimada": "2025-03-15",
+      "status": "activo"
+    },
+    {
+      "id": "pedido_014",
+      "cajas": [
+        { "simbolo": "ecg-02", "cantidad": 2000 }
+      ],
+      "fecha_entrega_estimada": "2025-03-18",
+      "status": "pendiente"
+    },
+    {
+      "id": "pedido_015",
+      "cajas": [
+        { "simbolo": "ecg-01", "cantidad": 5000 }
+      ],
+      "fecha_entrega_estimada": "2025-03-22",
+      "status": "activo"
+    },
+    {
+      "id": "pedido_016",
+      "cajas": [
+        { "simbolo": "ecg-02", "cantidad": 7000 }
+      ],
+      "fecha_entrega_estimada": "2025-03-25",
+      "status": "pendiente"
+    },
+    {
+      "id": "pedido_017",
+      "cajas": [
+        { "simbolo": "ecg-03", "cantidad": 4000 }
+      ],
+      "fecha_entrega_estimada": "2025-03-28",
+      "status": "activo"
+    },
+    {
+      "id": "pedido_018",
+      "cajas": [
+        { "simbolo": "ecg-01", "cantidad": 3500 }
+      ],
+      "fecha_entrega_estimada": "2025-03-30",
+      "status": "pendiente"
+    },
+    {
+      "id": "pedido_019",
+      "cajas": [
+        { "simbolo": "ecg-02", "cantidad": 6000 }
+      ],
+      "fecha_entrega_estimada": "2025-04-02",
+      "status": "activo"
+    },
+    {
+      "id": "pedido_020",
+      "cajas": [
+        { "simbolo": "ecg-03", "cantidad": 2500 }
+      ],
+      "fecha_entrega_estimada": "2025-04-05",
+      "status": "pendiente"
+    }
+  ]
+}
