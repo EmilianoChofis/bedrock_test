@@ -69,6 +69,5 @@ Planificar la producción de una máquina corrugadora de cartón en corridas, ca
         "maquina": "flexo",
         "status": "pendiente"
     }
-
 ]
 

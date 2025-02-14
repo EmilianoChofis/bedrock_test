@@ -1,0 +1,110 @@
+[
+  {
+    "pedido": "001",
+    "cajas_procesadas": [
+      {
+        "simbolo": "caja_001",
+        "cantidad": 500,
+        "salen": 2,
+        "jerarquia": "prioridad"
+      }
+    ],
+    "lamina": "lamina_001",
+    "fecha_programada": "2025-02-01",
+    "hora_inicio": "08:00",
+    "hora_fin": "10:00",
+    "tiempo": "120",
+    "refile": 5,
+    "metros_lineales": 6171,
+    "peso_total": 3189,
+    "velocidad": 70,
+    "maquina": "flexo",
+    "status": "pendiente"
+  },
+  {
+    "pedido": "001",
+    "cajas_procesadas": [
+      {
+        "simbolo": "caja_001",
+        "cantidad": 500,
+        "salen": 2,
+        "jerarquia": "prioridad"
+      },
+      {
+        "simbolo": "caja_002",
+        "cantidad": 490,
+        "salen": 1,
+        "jerarquia": "complemento",
+        "restante": 110
+      }
+    ],
+    "lamina": "lamina_001",
+    "fecha_programada": "2025-02-01",
+    "hora_inicio": "08:00",
+    "hora_fin": "10:00",
+    "tiempo": "120",
+    "refile": 5,
+    "metros_lineales": 6171,
+    "peso_total": 3189,
+    "velocidad": 70,
+    "maquina": "flexo",
+    "status": "pendiente"
+  },
+  {
+    "pedido": "002",
+    "cajas_procesadas": [
+      {
+        "simbolo": "caja_003",
+        "cantidad": 300,
+        "salen": 1,
+        "jerarquia": "prioridad"
+      },
+      {
+        "tira_autorizada": true,
+        "mts_lineales": 550
+      }
+    ],
+    "lamina": "lamina_002",
+    "fecha_programada": "2025-02-01",
+    "hora_inicio": "10:05",
+    "hora_fin": "11:20",
+    "refile": 5,
+    "metros_lineales": 4120,
+    "peso_total": 2100,
+    "velocidad": 65,
+    "maquina": "flexo",
+    "status": "pendiente"
+  },
+  {
+    "pedido": "002",
+    "cajas_procesadas": [
+      {
+        "simbolo": "caja_003",
+        "cantidad": 300,
+        "salen": 1,
+        "jerarquia": "prioridad"
+      },
+      {
+        "simbolo": "caja_002",
+        "cantidad": 490,
+        "salen": 1,
+        "jerarquia": "complemento",
+        "restante": 110
+      },
+      {
+        "tira_autorizada": true,
+        "mts_lineales": 550
+      }
+    ],
+    "lamina": "lamina_002",
+    "fecha_programada": "2025-02-01",
+    "hora_inicio": "10:05",
+    "hora_fin": "11:20",
+    "refile": 5,
+    "metros_lineales": 4120,
+    "peso_total": 2100,
+    "velocidad": 65,
+    "maquina": "flexo",
+    "status": "pendiente"
+  }
+]

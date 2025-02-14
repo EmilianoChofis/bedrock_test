@@ -17,11 +17,9 @@ def invoke_bedrock_model(client, prompt, model_id="amazon.nova-micro-v1:0"):
     """
     Invoke the Bedrock model with a prompt
     """
-
     body = json.dumps({
         "messages": [
-            {"role": "user",
-             "content": [prompt]}
+            {"role": "user", "content": [prompt]}
         ],
     })
 
