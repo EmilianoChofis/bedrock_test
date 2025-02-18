@@ -26,7 +26,7 @@ async def process_prompt(request: PromptRequest):
         Datos Cajas: {json.dumps(request.data_cajas, indent=2, ensure_ascii=False)}\n\n
         Datos Láminas: {json.dumps(request.data_laminas, indent=2, ensure_ascii=False)}\n\n
         Datos Pedidos: {json.dumps(request.data_pedidos, indent=2, ensure_ascii=False)}\n\n
-        Formato de Salida Esperado (se espera solo el JSON): {json.dumps(request.output_sample, indent=2, ensure_ascii=False)}\n\n
+        Formato de Salida Esperado: {json.dumps(request.output_sample, indent=2, ensure_ascii=False)}\n\n
         """}
 
         # Get response from Bedrock
