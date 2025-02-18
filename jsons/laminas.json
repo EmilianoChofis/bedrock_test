@@ -2,7 +2,10 @@
   {
     "id": "lamina_001",
     "ancho_rollo": 73,
-    "etc": [19, 21],
+    "etc": [
+      19,
+      21
+    ],
     "grms": 354
   },
   {
@@ -26,67 +29,108 @@
   {
     "id": "lamina_005",
     "ancho_rollo": 86,
-    "etc": [19, 21],
-    "grms": 350
+    "etc": [
+      19,
+      21
+    ],
+    "grms": 350,
+    "cajas": [
+      {
+        "id": "GALLETERA CR 15R-M"
+      },
+      {
+        "id": "GALLETERA CR 30-R"
+      }
+    ]
   },
   {
     "id": "lamina_006",
     "ancho_rollo": 86,
-    "etc": [32, 35],
-    "grms": 420},
+    "etc": [
+      32,
+      35
+    ],
+    "grms": 420
+  },
   {
     "id": "lamina_007",
     "ancho_rollo": 137,
     "etc": 19,
-    "grms": 350},
+    "grms": 350
+  },
   {
     "id": "lamina_008",
     "ancho_rollo": 90,
     "etc": 19,
-    "grms": 340},
+    "grms": 340
+  },
   {
     "id": "lamina_009",
     "ancho_rollo": 125,
     "etc": 21,
-    "grms": 372},
+    "grms": 372
+  },
   {
     "id": "lamina_010",
     "ancho_rollo": 115,
-    "etc": [21, 23],
-    "grms": 345},
+    "etc": [
+      21,
+      23
+    ],
+    "grms": 345
+  },
   {
     "id": "lamina_011",
     "ancho_rollo": 115,
     "etc": 21,
-    "grms": 360},
+    "grms": 360
+  },
   {
     "id": "lamina_012",
     "ancho_rollo": 133,
-    "etc": [29, 32],
-    "grms": 420},
+    "etc": [
+      29,
+      32
+    ],
+    "grms": 420
+  },
   {
     "id": "lamina_013",
     "ancho_rollo": 114,
-    "etc": [21, 23],
-    "grms": 340},
+    "etc": [
+      21,
+      23
+    ],
+    "grms": 340
+  },
   {
     "id": "lamina_014",
     "ancho_rollo": 102,
     "etc": 44,
-    "grms": 450},
+    "grms": 450
+  },
   {
     "id": "lamina_015",
     "ancho_rollo": 160,
-    "etc": [32, 35],
-    "grms": 420},
+    "etc": [
+      32,
+      35
+    ],
+    "grms": 420
+  },
   {
     "id": "lamina_016",
     "ancho_rollo": 160,
-    "etc": [21, 23],
-    "grms": 345},
+    "etc": [
+      21,
+      23
+    ],
+    "grms": 345
+  },
   {
     "id": "lamina_017",
     "ancho_rollo": 110,
     "etc": 19,
-    "grms": 345}
+    "grms": 345
+  }
 ]

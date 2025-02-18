@@ -18,5 +18,5 @@ else:
     json_data = f"Error: La hoja '{sheet_name}' no existe en el archivo."
 
 # Guardar el JSON en un archivo
-with open("data_pedidos.json", "w") as json_file:
+with open("jsons/data_pedidos.json", "w") as json_file:
     json_file.write(json_data)

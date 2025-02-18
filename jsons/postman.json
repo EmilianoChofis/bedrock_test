@@ -1,0 +1,405 @@
+{
+  "prompt": "Planificar la producción de una máquina corrugadora de cartón en corridas, cada una procesando 1-2 tipos de cajas, maximizando uso de recursos. Priorizar pedidos por fecha de entrega y cantidad, anticipando la programación al menos dos dias antes de su fecha de entrega. Si una lámina tiene una caja asociada (caja.id), ya no es necesario combinarla. Pero sí es necesario que siga las demás reglas aplicables. Si una lámina no tiene caja asociada, puede usarse para combinaciones siguiendo las reglas. Reglas: Agrupar pedidos por ECT, liner y tratamiento antihumedad, es decir que tanto la lamina como las cajas deben compartir estas caracteristicas. Refile: de 4cm a 8cm, es el desperdicio que sobra de la lamina. Cajas en la lámina: Una caja puede estar hasta dos veces según el ancho de la lamina. y puede combinarse con otra caja siempre y cuando sea suficiente el ancho de la lamina. Máximo 2 combinaciones de distinta caja por lámina. Si una caja no puede combinarse, se programa sola con mayor refile y se marca como tira autorizada. Jerarquía de pedidos: Para las combinaciones se toma como pedido prioritario aquel de mayor cantidad, el pedido complementario requiere de un calculo de cuantas piezas son posibles según los metros lineales del pedido prioritario, se proporciona una formula para llegar a este calculo, naturalmente quedara un restante, misma que deberá asignarse a otra corrida. Cálculos: Metros lineales: ((cantidad * largo_caja / 100) / salen). Tiempo: metros_lineales / 65 (redondeado a entero). Complemento_piezas: ((cantidad_prioridad * largo_prioridad / salen_prioridad)) / (largo_complemento * salen_complemento) (redondeado a entero). Horario: Lunes: 8:20-18:00. Mar-Jue: 8:20-22:30. Viernes: 8:20-17:30. Llenar todo el horario antes de dejar espacios o hacer saltos. Las corridas se encadenan sin tiempos muertos. Si una corrida excede el horario del día, se ajusta al siguiente día. IMPORTANTE: TU RESPUESTA DEBE SER UN JSON SIN NINGUN OTRO MENSAJE O TEXTO. NO COPIES LOS DATOS DE EJEMPLO, SOLO USA SU FORMATO",
+  "data_cajas": [
+    {
+      "simbolo": "GALLETERA CR 15R-M",
+      "ect": 19,
+      "liner": "kraft",
+      "ancho": 42,
+      "largo": 112.3,
+      "flauta": "C",
+      "tratamiento": 0,
+      "extra": {
+        "tipo": "CRR",
+        "maquina": "flexo"
+      }
+    },
+    {
+      "simbolo": "GALLETERA CR 30-R",
+      "ect": 19,
+      "liner": "kraft",
+      "ancho": 44.2,
+      "largo": 165.3,
+      "flauta": "C",
+      "tratamiento": 0,
+      "extra": {
+        "tipo": "CRR",
+        "maquina": "flexo"
+      }
+    },
+    {
+      "simbolo": "EASTER EGG CANE WITH CHOCOLATE 1.7 OZ",
+      "ect": 29,
+      "liner": "kraft",
+      "ancho": 65.6,
+      "largo": 89.8,
+      "flauta": "C",
+      "tratamiento": 0,
+      "extra": {
+        "tipo": "CRR",
+        "maquina": "almacen"
+      }
+    },
+    {
+      "simbolo": "BONDY CR RING POP 20",
+      "ect": 32,
+      "liner": "kraft",
+      "ancho": 56.7,
+      "largo": 164.3,
+      "flauta": "C",
+      "tratamiento": 0,
+      "extra": {
+        "tipo": "CRR",
+        "maquina": "flexo"
+      }
+    },
+    {
+      "simbolo": "JARAM CR 34X34X26",
+      "ect": 32,
+      "liner": "kraft",
+      "ancho": 61.1,
+      "largo": 142.3,
+      "flauta": "C",
+      "tratamiento": 0,
+      "extra": {
+        "tipo": "CRR",
+        "maquina": "flexo"
+      }
+    },
+    {
+      "simbolo": "DEG CR CE-5 (PDA)",
+      "ect": 19,
+      "liner": "kraft",
+      "ancho": 54.8,
+      "largo": 144.3,
+      "flauta": "C",
+      "tratamiento": 0,
+      "extra": {
+        "tipo": "CRR",
+        "maquina": "flexo"
+      }
+    }
+  ],
+  "data_laminas": [
+    {
+      "id": "lamina_001",
+      "ancho_rollo": 73,
+      "etc": [
+        19,
+        21
+      ],
+      "grms": 354
+    },
+    {
+      "id": "lamina_002",
+      "ancho_rollo": 73,
+      "etc": 23,
+      "grms": 372
+    },
+    {
+      "id": "lamina_003",
+      "ancho_rollo": 73,
+      "etc": 26,
+      "grms": 390
+    },
+    {
+      "id": "lamina_004",
+      "ancho_rollo": 86,
+      "etc": 19,
+      "grms": 330
+    },
+    {
+      "id": "lamina_005",
+      "ancho_rollo": 86,
+      "etc": [
+        19,
+        21
+      ],
+      "grms": 350
+    },
+    {
+      "id": "lamina_006",
+      "ancho_rollo": 86,
+      "etc": [
+        32,
+        35
+      ],
+      "grms": 420
+    },
+    {
+      "id": "lamina_007",
+      "ancho_rollo": 137,
+      "etc": 19,
+      "grms": 350
+    },
+    {
+      "id": "lamina_008",
+      "ancho_rollo": 90,
+      "etc": 19,
+      "grms": 340
+    },
+    {
+      "id": "lamina_009",
+      "ancho_rollo": 125,
+      "etc": 21,
+      "grms": 372
+    },
+    {
+      "id": "lamina_010",
+      "ancho_rollo": 115,
+      "etc": [
+        21,
+        23
+      ],
+      "grms": 345
+    },
+    {
+      "id": "lamina_011",
+      "ancho_rollo": 115,
+      "etc": 21,
+      "grms": 360
+    },
+    {
+      "id": "lamina_012",
+      "ancho_rollo": 133,
+      "etc": [
+        29,
+        32
+      ],
+      "grms": 420
+    },
+    {
+      "id": "lamina_013",
+      "ancho_rollo": 114,
+      "etc": [
+        21,
+        23
+      ],
+      "grms": 340
+    },
+    {
+      "id": "lamina_014",
+      "ancho_rollo": 102,
+      "etc": 44,
+      "grms": 450
+    },
+    {
+      "id": "lamina_015",
+      "ancho_rollo": 160,
+      "etc": [
+        32,
+        35
+      ],
+      "grms": 420
+    },
+    {
+      "id": "lamina_016",
+      "ancho_rollo": 160,
+      "etc": [
+        21,
+        23
+      ],
+      "grms": 345
+    },
+    {
+      "id": "lamina_017",
+      "ancho_rollo": 110,
+      "etc": 19,
+      "grms": 345
+    }
+  ],
+  "data_pedidos": [
+    {
+      "oc": "047859",
+      "cajas": [
+        {
+          "simbolo": "GALLETERA CR 15R-M",
+          "cantidad": 5000
+        }
+      ],
+      "fecha_entrega_estimada": "2025-01-14"
+    },
+    {
+      "oc": "048089",
+      "cajas": [
+        {
+          "simbolo": "GALLETERA CR 30-R",
+          "cantidad": 5000
+        }
+      ],
+      "fecha_entrega_estimada": "2025-01-15"
+    },
+    {
+      "oc": "048107",
+      "cajas": [
+        {
+          "simbolo": "GALLETERA CR 30-R",
+          "cantidad": 9000
+        }
+      ],
+      "fecha_entrega_estimada": "2025-01-15"
+    },
+    {
+      "oc": "048107",
+      "cajas": [
+        {
+          "simbolo": "GALLETERA CR 30-R",
+          "cantidad": 6000
+        }
+      ],
+      "fecha_entrega_estimada": "2025-01-17"
+    },
+    {
+      "oc": "048108",
+      "cajas": [
+        {
+          "simbolo": "GALLETERA CR 30-R",
+          "cantidad": 8000
+        }
+      ],
+      "fecha_entrega_estimada": "2025-01-17"
+    },
+    {
+      "oc": "010",
+      "cajas": [
+        {
+          "simbolo": "EASTER EGG CANE WITH CHOCOLATE 1.7 OZ",
+          "cantidad": 85900
+        }
+      ],
+      "fecha_entrega_estimada": "2024-01-16"
+    },
+    {
+      "oc": "016161",
+      "cajas": [
+        {
+          "simbolo": "BONDY CR RING POP 20",
+          "cantidad": 8000
+        }
+      ],
+      "fecha_entrega_estimada": "2025-01-15"
+    },
+    {
+      "oc": "0611",
+      "cajas": [
+        {
+          "simbolo": "JARAM CR 34X34X26",
+          "cantidad": 3000
+        }
+      ],
+      "fecha_entrega_estimada": "2025-01-15"
+    },
+    {
+      "oc": "4500245891",
+      "cajas": [
+        {
+          "simbolo": "DEG CR CE-5 (PDA)",
+          "cantidad": 5000
+        }
+      ],
+      "fecha_entrega_estimada": "2025-01-15"
+    }
+  ],
+  "output_sample": [
+    {
+      "oc": "",
+      "cajas_procesadas": [
+        {
+          "simbolo": "",
+          "cantidad": 0,
+          "salen": 0,
+          "jerarquia": ""
+        }
+      ],
+      "lamina": "",
+      "fecha_programada": "",
+      "hora_inicio": "datetime",
+      "hora_fin": "datetime",
+      "tiempo": 0,
+      "refile": 0,
+      "metros_lineales": 0,
+      "peso_total": 0,
+      "velocidad": 0
+    },
+    {
+      "oc": "",
+      "cajas_procesadas": [
+        {
+          "simbolo": "",
+          "cantidad": 0,
+          "salen": 0,
+          "jerarquia": ""
+        },
+        {
+          "simbolo": "",
+          "cantidad": 0,
+          "salen": 0,
+          "jerarquia": "",
+          "restante": 0
+        }
+      ],
+      "lamina": "",
+      "fecha_programada": "date",
+      "hora_inicio": "datetime",
+      "hora_fin": "datetime",
+      "tiempo": 0,
+      "refile": 0,
+      "metros_lineales": 0,
+      "peso_total": 0,
+      "velocidad": 0
+    },
+    {
+      "oc": "",
+      "cajas_procesadas": [
+        {
+          "simbolo": "",
+          "cantidad": 0,
+          "salen": 0,
+          "jerarquia": ""
+        },
+        {
+          "tira_autorizada": true,
+          "mts_lineales": 0
+        }
+      ],
+      "lamina": "",
+      "fecha_programada": "date",
+      "hora_inicio": "datetime",
+      "hora_fin": "datetime",
+      "refile": 0,
+      "metros_lineales": 0,
+      "peso_total": 0,
+      "velocidad": 0
+    },
+    {
+      "oc": "",
+      "cajas_procesadas": [
+        {
+          "simbolo": "",
+          "cantidad": 0,
+          "salen": 0,
+          "jerarquia": ""
+        },
+        {
+          "simbolo": "",
+          "cantidad": 0,
+          "salen": 0,
+          "jerarquia": "",
+          "restante": 0
+        },
+        {
+          "tira_autorizada": true,
+          "mts_lineales": 0
+        }
+      ],
+      "lamina": "",
+      "fecha_programada": "date",
+      "hora_inicio": "datetime",
+      "hora_fin": "datetime",
+      "refile": 0,
+      "metros_lineales": 0,
+      "peso_total": 0,
+      "velocidad": 0
+    }
+  ]
+}

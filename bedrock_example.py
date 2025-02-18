@@ -38,7 +38,7 @@ def main():
     client = initialize_bedrock_client()
 
     # Read and load the JSON data
-    with open('data.json', 'r') as json_file:
+    with open('jsons/data.json', 'r') as json_file:
         json_data = json.load(json_file)
     # Create the prompt
     prompt = {"text": """Contexto: Se realiza una programación semanal de una maquina corrugadora de carton para cumplir con fechas de entrega y con eficiencia en el uso de recursos. Se realizan corridas que son bloques de producción que cortan al menos 1 caja, máximo 2, y las corridas son ordenadas para su producción durante el día, según el tiempo que toma producirlas y la fecha de entrega del pedido dejando máximo 2 dias de anticipación para la produccion de un pedido. Se cuida el no sobrecargar un solo día de trabajo.

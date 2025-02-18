@@ -1,0 +1,65 @@
+[
+  {
+    "oc": "047859",
+    "cajas": [
+      { "simbolo": "GALLETERA CR 15R-M", "cantidad": 5000 }
+    ],
+    "fecha_entrega_estimada": "2025-02-24"
+  },
+  {
+    "oc": "048089",
+    "cajas": [
+      { "simbolo": "GALLETERA CR 30-R", "cantidad": 5000 }
+    ],
+    "fecha_entrega_estimada": "2025-02-25"
+  },
+  {
+    "oc": "048107",
+    "cajas": [
+      { "simbolo": "GALLETERA CR 30-R", "cantidad": 9000 }
+    ],
+    "fecha_entrega_estimada": "2025-02-26"
+  },
+  {
+    "oc": "048107",
+    "cajas": [
+      { "simbolo": "GALLETERA CR 15R-M", "cantidad": 6000 }
+    ],
+    "fecha_entrega_estimada": "2025-02-27"
+  },
+  {
+    "oc": "048108",
+    "cajas": [
+      { "simbolo": "GALLETERA CR 30-R", "cantidad": 8000 }
+    ],
+    "fecha_entrega_estimada": "2025-02-28"
+  },
+  {
+    "oc": "010",
+    "cajas": [
+      { "simbolo": "EASTER EGG CANE WITH CHOCOLATE 1.7 OZ", "cantidad": 8900 }
+    ],
+    "fecha_entrega_estimada": "2025-02-25"
+  },
+  {
+    "oc": "016161",
+    "cajas": [
+      { "simbolo": "BONDY CR RING POP 20", "cantidad": 800 }
+    ],
+    "fecha_entrega_estimada": "2025-02-24"
+  },
+  {
+    "oc": "0611",
+    "cajas": [
+      { "simbolo": "JARAM CR 34X34X26", "cantidad": 680 }
+    ],
+    "fecha_entrega_estimada": "2025-02-26"
+  },
+  {
+    "oc": "4500245891",
+    "cajas": [
+      { "simbolo": "DEG CR CE-5 (PDA)", "cantidad": 5500 }
+    ],
+    "fecha_entrega_estimada": "2025-02-26"
+  }
+]
