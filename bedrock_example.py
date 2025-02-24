@@ -13,14 +13,14 @@ def initialize_bedrock_client():
     return bedrock_client
 
 
-def invoke_bedrock_model(client, prompt, model_id="amazon.nova-micro-v1:0"):
+def invoke_bedrock_model(client, prompt, model_id="amazon.nova-pro-v1:0"):
     """
     Invoke the Bedrock model with a prompt
     """
     body = json.dumps({
         "messages": [
             {"role": "user", "content": [prompt]}
-        ],
+        ]
     })
 
     response = client.invoke_model(
