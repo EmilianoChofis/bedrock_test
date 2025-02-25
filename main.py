@@ -4,6 +4,7 @@ from pydantic import BaseModel
 import json
 from bedrock_example import initialize_bedrock_client, invoke_bedrock_model
 from extract_json_from_response import extract_json_from_response
+from mistral_example import invoke_mistral_model
 
 app = FastAPI()
 
@@ -26,12 +27,14 @@ async def process_prompt(request: PromptRequest):
         Boxes data: {json.dumps(request.data_cajas, indent=2, ensure_ascii=False)}\n\n
         Sheets data: {json.dumps(request.data_laminas, indent=2, ensure_ascii=False)}\n\n
         Purchase orders data: {json.dumps(request.data_pedidos, indent=2, ensure_ascii=False)}\n\n
+        Use this data to generate the plan, following all rules and ensuring accurate calculations.
         Expected output, Respond with a JSON structured as follows, with no extra text: {json.dumps(request.output_sample, indent=2, ensure_ascii=False)}\n\n
         """}
 
         # Get response from Bedrock
         response = invoke_bedrock_model(bedrock_client, context)
-        json_response = extract_json_from_response(response)
+        #response = invoke_mistral_model(bedrock_client, context)
+        #json_response = extract_json_from_response(response)
         return {"response": response}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

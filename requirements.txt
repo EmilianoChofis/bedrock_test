@@ -4,3 +4,4 @@ openpyxl
 fastapi~=0.115.8
 pydantic~=2.10.6
 boto3~=1.36.17
+botocore~=1.36.17

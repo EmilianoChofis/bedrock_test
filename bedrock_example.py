@@ -20,12 +20,18 @@ def invoke_bedrock_model(client, prompt, model_id="amazon.nova-pro-v1:0"):
     body = json.dumps({
         "messages": [
             {"role": "user", "content": [prompt]}
-        ]
+        ],
+        "inferenceConfig": {
+            "temperature": 0.1
+        },
+
     })
 
     response = client.invoke_model(
         modelId=model_id,
         body=body,
+        contentType='application/json',
+        accept='application/json'
     )
 
     # Parse and return the response

@@ -6,17 +6,17 @@
         "simbolo": "GALLETERA CR 15R-M",
         "cantidad": 5000,
         "salen": 1,
-        "jerarquia": "prioridad"
+        "jerarquia": "prioritaria"
       }
     ],
     "lamina": "lamina_008",
     "fecha_programada": "2025-02-24",
     "hora_inicio": "2025-02-24T08:20:00",
-    "hora_fin": "2025-02-24T12:10:00",
-    "tiempo": 250,
-    "refile": 6,
-    "metros_lineales": 5600,
-    "peso_total": 1904,
+    "hora_fin": "2025-02-24T10:00:00",
+    "tiempo": 100,
+    "refile": 47,
+    "metros_lineales": 56150,
+    "peso_total": 1981.7,
     "velocidad": 65
   },
   {
@@ -26,77 +26,17 @@
         "simbolo": "GALLETERA CR 30-R",
         "cantidad": 5000,
         "salen": 1,
-        "jerarquia": "prioridad"
+        "jerarquia": "prioritaria"
       }
     ],
-    "lamina": "lamina_008",
-    "fecha_programada": "2025-02-25",
-    "hora_inicio": "2025-02-25T08:20:00",
-    "hora_fin": "2025-02-25T12:10:00",
-    "tiempo": 250,
-    "refile": 6,
-    "metros_lineales": 8265,
-    "peso_total": 2810.1,
-    "velocidad": 65
-  },
-  {
-    "oc": "048107",
-    "cajas_procesadas": [
-      {
-        "simbolo": "GALLETERA CR 30-R",
-        "cantidad": 9000,
-        "salen": 1,
-        "jerarquia": "prioridad"
-      }
-    ],
-    "lamina": "lamina_008",
-    "fecha_programada": "2025-02-26",
-    "hora_inicio": "2025-02-26T08:20:00",
-    "hora_fin": "2025-02-26T13:50:00",
-    "tiempo": 340,
-    "refile": 6,
-    "metros_lineales": 14877,
-    "peso_total": 5058.18,
-    "velocidad": 65
-  },
-  {
-    "oc": "048107",
-    "cajas_procesadas": [
-      {
-        "simbolo": "GALLETERA CR 15R-M",
-        "cantidad": 6000,
-        "salen": 1,
-        "jerarquia": "prioridad"
-      }
-    ],
-    "lamina": "lamina_008",
-    "fecha_programada": "2025-02-27",
-    "hora_inicio": "2025-02-27T08:20:00",
-    "hora_fin": "2025-02-27T12:10:00",
-    "tiempo": 250,
-    "refile": 6,
-    "metros_lineales": 6720,
-    "peso_total": 2284.8,
-    "velocidad": 65
-  },
-  {
-    "oc": "048108",
-    "cajas_procesadas": [
-      {
-        "simbolo": "GALLETERA CR 30-R",
-        "cantidad": 8000,
-        "salen": 1,
-        "jerarquia": "prioridad"
-      }
-    ],
-    "lamina": "lamina_008",
-    "fecha_programada": "2025-02-28",
-    "hora_inicio": "2025-02-28T08:20:00",
-    "hora_fin": "2025-02-28T12:10:00",
-    "tiempo": 250,
-    "refile": 6,
-    "metros_lineales": 13224,
-    "peso_total": 4496.16,
+    "lamina": "lamina_017",
+    "fecha_programada": "2025-02-24",
+    "hora_inicio": "2025-02-24T10:00:00",
+    "hora_fin": "2025-02-24T11:40:00",
+    "tiempo": 100,
+    "refile": 65.8,
+    "metros_lineales": 82650,
+    "peso_total": 2828.1,
     "velocidad": 65
   },
   {
@@ -106,17 +46,17 @@
         "simbolo": "EASTER EGG CANE WITH CHOCOLATE 1.7 OZ",
         "cantidad": 8900,
         "salen": 1,
-        "jerarquia": "prioridad"
+        "jerarquia": "prioritaria"
       }
     ],
     "lamina": "lamina_012",
-    "fecha_programada": "2025-02-25",
-    "hora_inicio": "2025-02-25T12:10:00",
-    "hora_fin": "2025-02-25T18:00:00",
-    "tiempo": 370,
-    "refile": 5.2,
-    "metros_lineales": 12460,
-    "peso_total": 5233.2,
+    "fecha_programada": "2025-02-24",
+    "hora_inicio": "2025-02-24T11:40:00",
+    "hora_fin": "2025-02-24T14:40:00",
+    "tiempo": 180,
+    "refile": 67.4,
+    "metros_lineales": 79918,
+    "peso_total": 3356.556,
     "velocidad": 65
   },
   {
@@ -126,17 +66,77 @@
         "simbolo": "BONDY CR RING POP 20",
         "cantidad": 800,
         "salen": 1,
-        "jerarquia": "prioridad"
+        "jerarquia": "prioritaria"
       }
     ],
     "lamina": "lamina_006",
     "fecha_programada": "2025-02-24",
-    "hora_inicio": "2025-02-24T12:10:00",
-    "hora_fin": "2025-02-24T13:00:00",
-    "tiempo": 50,
-    "refile": 6.6,
-    "metros_lineales": 1314.4,
-    "peso_total": 552.05,
+    "hora_inicio": "2025-02-24T14:40:00",
+    "hora_fin": "2025-02-24T15:20:00",
+    "tiempo": 40,
+    "refile": 29.3,
+    "metros_lineales": 13440,
+    "peso_total": 564.48,
+    "velocidad": 65
+  },
+  {
+    "oc": "048107",
+    "cajas_procesadas": [
+      {
+        "simbolo": "GALLETERA CR 30-R",
+        "cantidad": 9000,
+        "salen": 1,
+        "jerarquia": "prioritaria"
+      }
+    ],
+    "lamina": "lamina_017",
+    "fecha_programada": "2025-02-25",
+    "hora_inicio": "2025-02-25T08:20:00",
+    "hora_fin": "2025-02-25T11:20:00",
+    "tiempo": 180,
+    "refile": 65.8,
+    "metros_lineales": 148770,
+    "peso_total": 5058.78,
+    "velocidad": 65
+  },
+  {
+    "oc": "048107",
+    "cajas_procesadas": [
+      {
+        "simbolo": "GALLETERA CR 15R-M",
+        "cantidad": 6000,
+        "salen": 1,
+        "jerarquia": "prioritaria"
+      }
+    ],
+    "lamina": "lamina_008",
+    "fecha_programada": "2025-02-25",
+    "hora_inicio": "2025-02-25T11:20:00",
+    "hora_fin": "2025-02-25T13:00:00",
+    "tiempo": 100,
+    "refile": 47,
+    "metros_lineales": 67380,
+    "peso_total": 2385.3,
+    "velocidad": 65
+  },
+  {
+    "oc": "048108",
+    "cajas_procesadas": [
+      {
+        "simbolo": "GALLETERA CR 30-R",
+        "cantidad": 8000,
+        "salen": 1,
+        "jerarquia": "prioritaria"
+      }
+    ],
+    "lamina": "lamina_017",
+    "fecha_programada": "2025-02-26",
+    "hora_inicio": "2025-02-26T08:20:00",
+    "hora_fin": "2025-02-26T11:20:00",
+    "tiempo": 180,
+    "refile": 65.8,
+    "metros_lineales": 132660,
+    "peso_total": 4473.78,
     "velocidad": 65
   },
   {
@@ -146,17 +146,17 @@
         "simbolo": "JARAM CR 34X34X26",
         "cantidad": 680,
         "salen": 1,
-        "jerarquia": "prioridad"
+        "jerarquia": "prioritaria"
       }
     ],
     "lamina": "lamina_006",
     "fecha_programada": "2025-02-26",
-    "hora_inicio": "2025-02-26T13:50:00",
-    "hora_fin": "2025-02-26T15:00:00",
-    "tiempo": 70,
-    "refile": 6.2,
-    "metros_lineales": 1187.2,
-    "peso_total": 496.64,
+    "hora_inicio": "2025-02-26T11:20:00",
+    "hora_fin": "2025-02-26T12:00:00",
+    "tiempo": 40,
+    "refile": 21.9,
+    "metros_lineales": 11088,
+    "peso_total": 465.744,
     "velocidad": 65
   },
   {
@@ -166,17 +166,17 @@
         "simbolo": "DEG CR CE-5 (PDA)",
         "cantidad": 5500,
         "salen": 1,
-        "jerarquia": "prioridad"
+        "jerarquia": "prioritaria"
       }
     ],
     "lamina": "lamina_004",
     "fecha_programada": "2025-02-26",
-    "hora_inicio": "2025-02-26T15:00:00",
-    "hora_fin": "2025-02-26T18:00:00",
-    "tiempo": 260,
-    "refile": 5.6,
-    "metros_lineales": 12100,
-    "peso_total": 3993,
+    "hora_inicio": "2025-02-26T12:00:00",
+    "hora_fin": "2025-02-26T14:40:00",
+    "tiempo": 160,
+    "refile": 18.4,
+    "metros_lineales": 91380,
+    "peso_total": 3014.52,
     "velocidad": 65
   }
 ]

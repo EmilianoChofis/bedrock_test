@@ -54,15 +54,7 @@
     "id": "lamina_008",
     "ancho_rollo": 90,
     "etc": 19,
-    "grms": 340,
-    "cajas": [
-      {
-        "id": "GALLETERA CR 15R-M"
-      },
-      {
-        "id": "GALLETERA CR 30-R"
-      }
-    ]
+    "grms": 340
   },
   {
     "id": "lamina_009",
